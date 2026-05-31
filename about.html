@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Swamp FX | The Maker Behind the Mask</title>
+  <meta name="description" content="Meet Zach — the artist behind Swamp FX. Handcrafted horror masks built from scratch in Bowersville, GA using professional silicone and foam latex techniques.">
+  <link rel="stylesheet" href="css/swampfx.css">
+  <style>
+    /* Origin story */
+    .origin-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(40px, 7vw, 90px);
+      align-items: start;
+    }
+    @media (max-width: 768px) {
+      .origin-grid { grid-template-columns: 1fr; }
+      .origin-img-col { order: -1; }
+    }
+
+    /* Mascot section stacked images */
+    .mascot-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .mascot-stack .img-frame img { max-height: 320px; object-fit: contain; }
+
+    /* Values row */
+    .values-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 60px;
+    }
+    @media (max-width: 700px) { .values-row { grid-template-columns: 1fr; } }
+
+    .value-card {
+      background: var(--gunmetal);
+      border: 1px solid rgba(255,255,255,0.05);
+      padding: 28px 24px;
+      border-top: 3px solid var(--slime);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .value-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 28px rgba(0,0,0,0.3);
+    }
+    .value-num {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      color: var(--slime);
+      opacity: 0.25;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .value-title {
+      font-family: var(--font-spider);
+      font-size: 1.15rem;
+      color: var(--slime);
+      margin-bottom: 10px;
+      letter-spacing: 0.04em;
+    }
+    .value-desc {
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      color: var(--bone);
+      line-height: 1.65;
+    }
+  </style>
+</head>
+<body data-page="about">
+
+  <!-- NAV -->
+  <nav class="site-nav">
+    <a href="index.html" class="nav-logo">
+      <img src="brand assests/Zach_swampfx/swampfx_word_logo_v101.png" alt="Swamp FX">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html"   data-nav="home">Home</a></li>
+      <li><a href="gallery.html" data-nav="gallery">Gallery</a></li>
+      <li><a href="about.html"   data-nav="about">About</a></li>
+      <li><a href="contact.html" data-nav="contact">Custom Orders</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="mailto:Cavemanoutdoors@gmail.com" class="nav-email-icon" title="Email Zach">✉</a>
+      <a href="contact.html" class="nav-quote-btn">Get a Quote</a>
+    </div>
+    <button class="nav-hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-skull">
+      <img src="brand assests/Zach_swampfx/swampfx4_skull_head_circle_v101.png" alt="">
+    </div>
+  </nav>
+  <div class="nav-mobile">
+    <ul>
+      <li><a href="index.html"   data-nav="home">Home</a></li>
+      <li><a href="gallery.html" data-nav="gallery">Gallery</a></li>
+      <li><a href="about.html"   data-nav="about">About</a></li>
+      <li><a href="contact.html" data-nav="contact">Custom Orders</a></li>
+    </ul>
+    <a href="contact.html" class="mobile-quote">Get a Quote →</a>
+  </div>
+
+
+  <!-- PAGE HERO -->
+  <div class="page-hero page-hero--lg">
+    <div class="page-hero-bg" style="background-image: url('brand assests/Zach_swampfx/image-1.jpg');"></div>
+    <div class="page-hero-content">
+      <span class="page-hero-label">The Story</span>
+      <h1 class="page-hero-title">THE MAKER<br>BEHIND THE MASK</h1>
+      <p class="page-hero-sub">One artist. One studio. Built from obsession.</p>
+    </div>
+  </div>
+
+
+  <!-- ORIGIN STORY -->
+  <section class="section section--black">
+    <div class="section-inner">
+      <div class="origin-grid">
+        <div class="reveal">
+          <span class="section-label">01 / The Origin</span>
+          <h2 class="heading-xl">BORN FROM A<br>LOVE OF HORROR</h2>
+          <div class="body-text">
+            <p>Swamp FX began the way all great things do — out of obsession. Zach grew up watching horror films and practical effects artists turn latex and paint into monsters. He didn't just want to watch it. He wanted to make it.</p>
+            <p>Working out of Bowersville, Georgia, Zach taught himself the craft from the ground up — studying foam latex techniques, silicone casting, and hand-painting methods used by Hollywood effects houses. Every mask is a direct result of that self-driven education.</p>
+            <p>What started as a passion project became a small-batch mask studio. Swamp FX now creates custom horror prosthetics and full-head masks for haunted houses, Halloween enthusiasts, cosplay artists, and independent film productions.</p>
+          </div>
+        </div>
+        <div class="origin-img-col reveal reveal-d2">
+          <div class="img-frame">
+            <img src="brand assests/Zach_swampfx/swampfx2_alpha_v101.png" alt="Swamp FX mascot" style="border: none; box-shadow: none;">
+            <div class="img-frame-corner img-frame-corner--tl"></div>
+            <div class="img-frame-corner img-frame-corner--br"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Values -->
+      <div class="values-row">
+        <div class="value-card reveal">
+          <div class="value-num">01</div>
+          <div class="value-title">NO SHORTCUTS</div>
+          <p class="value-desc">Every mask is built by hand using professional-grade materials. There is no assembly line at Swamp FX — just the artist and the craft.</p>
+        </div>
+        <div class="value-card reveal reveal-d2">
+          <div class="value-num">02</div>
+          <div class="value-title">REAL MATERIALS</div>
+          <p class="value-desc">Platinum silicone, foam latex, skin-safe pigments. The same materials used in Hollywood productions — applied with the same care and precision.</p>
+        </div>
+        <div class="value-card reveal reveal-d3">
+          <div class="value-num">03</div>
+          <div class="value-title">YOUR VISION</div>
+          <p class="value-desc">Zach works directly with every client. Your character, your concept, your brief — built into a finished piece that exists nowhere else on earth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="divider"></div>
+
+
+  <!-- THE PROCESS -->
+  <section class="section section--charcoal">
+    <div class="section-inner">
+      <div class="reveal">
+        <span class="section-label">02 / The Process</span>
+        <h2 class="heading-xl">HOW A MASK<br>IS BORN</h2>
+      </div>
+
+      <div class="process-grid">
+
+        <div class="process-step reveal reveal-d1">
+          <div class="process-num">01</div>
+          <div class="process-line"></div>
+          <div class="process-title">CONCEPT</div>
+          <p class="process-desc">Every mask starts with a sketch. Zach works directly with you to define the character — proportions, features, mood, and story. Nothing moves forward until the vision is clear.</p>
+        </div>
+
+        <div class="process-step reveal reveal-d2">
+          <div class="process-num">02</div>
+          <div class="process-line"></div>
+          <div class="process-title">SCULPT &amp; MOLD</div>
+          <p class="process-desc">The design is sculpted in clay, then molded in plaster or silicone. The mold captures every detail — wrinkles, texture, surface damage, personality. This is where the character lives or dies.</p>
+        </div>
+
+        <div class="process-step reveal reveal-d3">
+          <div class="process-num">03</div>
+          <div class="process-line"></div>
+          <div class="process-title">CAST &amp; BUILD</div>
+          <p class="process-desc">Foam latex or platinum silicone is cast into the mold. The material is carefully pulled, trimmed, and seamed. Each casting is inspected — anything that doesn't meet the standard gets recast.</p>
+        </div>
+
+        <div class="process-step reveal reveal-d4">
+          <div class="process-num">04</div>
+          <div class="process-line"></div>
+          <div class="process-title">PAINT &amp; FINISH</div>
+          <p class="process-desc">Each mask is hand-painted using intrinsic and extrinsic pigments. Hair is punched one strand at a time. No two masks are identical — every piece carries its own finish.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <div class="divider"></div>
+
+
+  <!-- MASCOT ORIGIN -->
+  <section class="section section--black">
+    <div class="section-inner">
+      <div class="origin-grid">
+        <div class="mascot-stack reveal">
+          <div class="img-frame">
+            <img src="brand assests/Zach_swampfx/PicsArt_12-30-05.44.55.jpg" alt="Complete Swamp FX logo lockup">
+            <div class="img-frame-corner img-frame-corner--tl"></div>
+            <div class="img-frame-corner img-frame-corner--br"></div>
+          </div>
+        </div>
+        <div class="reveal reveal-d2">
+          <span class="section-label">03 / The Mascot</span>
+          <h2 class="heading-xl">THE SWAMP<br>ZOMBIE</h2>
+          <div class="body-text">
+            <p>The Swamp FX mascot — an undead skeleton rising from the earth — was hand-illustrated by a professional illustrator in 2021. The character started as a rough ink sketch and evolved into the full-color, atmospheric figure you see today.</p>
+            <p>The mascot represents the brand's identity: something that refuses to stay buried. Relentless craft. Wearable horror. The skeleton doesn't stop rising — and neither does the work.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CTA BANNER -->
+  <div class="cta-banner">
+    <div class="cta-banner-bg" style="background-image: url('brand assests/Zach_swampfx/image-2.jpg');"></div>
+    <div class="cta-banner-content reveal">
+      <h2>READY TO BUILD<br>SOMETHING?</h2>
+      <p>Zach takes on a limited number of custom projects. Reach out early — builds fill up fast around haunt season.</p>
+      <a href="contact.html" class="btn btn-primary">Start Your Custom Order →</a>
+    </div>
+  </div>
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-logo">
+        <img src="brand assests/Zach_swampfx/swampfx_word_logo_v101.png" alt="Swamp FX">
+        <p class="footer-tagline">Handcrafted Horror. Built by Hand.</p>
+        <p class="footer-copy">© 2026 Swamp FX. All rights reserved.</p>
+      </div>
+      <nav class="footer-nav">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Custom Orders</a></li>
+        </ul>
+      </nav>
+      <div class="footer-contact">
+        <h4>Get in Touch</h4>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon">✉</span>
+          <a href="mailto:Cavemanoutdoors@gmail.com">Cavemanoutdoors@gmail.com</a>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon">📍</span>
+          <span>Bowersville, GA</span>
+        </div>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-btn" title="Instagram">IG</a>
+          <a href="#" class="footer-social-btn" title="Facebook">FB</a>
+          <a href="#" class="footer-social-btn" title="TikTok">TK</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Swamp FX. All rights reserved.</span>
+      <span class="footer-bottom-domain">swampfx.art</span>
+    </div>
+    <div class="footer-built-by">
+      Built by <a href="https://bdfinkstudios.com" target="_blank" rel="noopener">BDFinkStudios.com</a> 2026
+    </div>
+  </footer>
+
+  <script src="js/swampfx.js"></script>
+</body>
+</html>

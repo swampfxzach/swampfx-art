@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — Swamp FX | Handcrafted Horror Masks</title>
+  <meta name="description" content="Browse the Swamp FX gallery — handcrafted silicone and foam latex horror masks. Custom characters, prosthetics, and haunt-grade builds from Bowersville, GA.">
+  <link rel="stylesheet" href="css/swampfx.css">
+  <style>
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 50px var(--pad-x) 100px;
+      max-width: calc(var(--content-max) + (var(--pad-x) * 2));
+      margin: 0 auto;
+    }
+    /* Taller image on gallery cards */
+    .gallery-grid .mask-card-img { aspect-ratio: 3/4; }
+
+    .gallery-count {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--slate);
+      padding: 14px var(--pad-x) 0;
+      max-width: calc(var(--content-max) + (var(--pad-x) * 2));
+      margin: 0 auto;
+    }
+
+    /* Mascot video spotlight */
+    .mascot-spotlight {
+      background: var(--swamp-dark);
+      border-bottom: 1px solid var(--gunmetal);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      gap: clamp(24px, 4vw, 60px);
+      padding: clamp(28px, 4vw, 48px) var(--pad-x);
+      overflow: hidden;
+      position: relative;
+    }
+    .mascot-spotlight::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 15% 50%, rgba(90,200,0,0.07) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .mascot-video-wrap {
+      position: relative;
+      flex-shrink: 0;
+      width: clamp(120px, 16vw, 220px);
+    }
+    .mascot-video-wrap video {
+      width: 100%;
+      display: block;
+      border: 1px solid rgba(90,200,0,0.3);
+      filter: drop-shadow(0 0 24px rgba(90,200,0,0.35));
+    }
+    .mascot-video-wrap::after {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      border: 1px solid rgba(90,200,0,0.15);
+      pointer-events: none;
+    }
+    .mascot-spotlight-text .section-label { margin-bottom: 10px; }
+    .mascot-spotlight-text h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 3vw, 2.5rem);
+      color: var(--text-primary);
+      line-height: 1.05;
+      margin-bottom: 10px;
+      letter-spacing: 0.02em;
+    }
+    .mascot-spotlight-text p {
+      font-family: var(--font-body);
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--slate);
+      max-width: 480px;
+      line-height: 1.6;
+    }
+    @media (max-width: 600px) {
+      .mascot-spotlight { grid-template-columns: 1fr; }
+      .mascot-video-wrap { width: clamp(100px, 40vw, 160px); margin: 0 auto; }
+      .mascot-spotlight-text { text-align: center; }
+      .mascot-spotlight-text p { margin: 0 auto; }
+    }
+  </style>
+</head>
+<body data-page="gallery">
+
+  <!-- NAV -->
+  <nav class="site-nav">
+    <a href="index.html" class="nav-logo">
+      <img src="brand assests/Zach_swampfx/swampfx_word_logo_v101.png" alt="Swamp FX">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html"   data-nav="home">Home</a></li>
+      <li><a href="gallery.html" data-nav="gallery">Gallery</a></li>
+      <li><a href="about.html"   data-nav="about">About</a></li>
+      <li><a href="contact.html" data-nav="contact">Custom Orders</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="mailto:Cavemanoutdoors@gmail.com" class="nav-email-icon" title="Email Zach">✉</a>
+      <a href="contact.html" class="nav-quote-btn">Get a Quote</a>
+    </div>
+    <button class="nav-hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-skull">
+      <img src="brand assests/Zach_swampfx/swampfx4_skull_head_circle_v101.png" alt="">
+    </div>
+  </nav>
+  <div class="nav-mobile">
+    <ul>
+      <li><a href="index.html"   data-nav="home">Home</a></li>
+      <li><a href="gallery.html" data-nav="gallery">Gallery</a></li>
+      <li><a href="about.html"   data-nav="about">About</a></li>
+      <li><a href="contact.html" data-nav="contact">Custom Orders</a></li>
+    </ul>
+    <a href="contact.html" class="mobile-quote">Get a Quote →</a>
+  </div>
+
+
+  <!-- PAGE HERO -->
+  <div class="page-hero page-hero--md">
+    <div class="page-hero-bg" style="background-image: url('brand assests/Zach_swampfx/image-3.jpg');"></div>
+    <div class="page-hero-content">
+      <span class="page-hero-label">The Collection</span>
+      <h1 class="page-hero-title">SWAMP FX GALLERY</h1>
+      <p class="page-hero-sub">Every mask is a one-of-a-kind piece.<br>Hand-built. Hand-painted. Born to terrify.</p>
+    </div>
+  </div>
+
+
+  <!-- MASCOT SPOTLIGHT -->
+  <div class="mascot-spotlight">
+    <div class="mascot-video-wrap">
+      <video autoplay muted loop playsinline
+        src="brand assests/Zach_swampfx/grok_video_2026-01-12-18-07-46.mp4">
+      </video>
+    </div>
+    <div class="mascot-spotlight-text">
+      <span class="section-label">Swamp FX Mascot</span>
+      <h2>BORN FROM<br>THE SWAMP.</h2>
+      <p>Every piece in this collection is hand-built by one artist — the same obsessive craft that brought this character to life.</p>
+    </div>
+  </div>
+
+  <!-- FILTER BAR -->
+  <div class="filter-bar">
+    <button class="filter-btn active">All</button>
+    <button class="filter-btn">Full Head</button>
+    <button class="filter-btn">Prosthetic</button>
+    <button class="filter-btn">Half Face</button>
+    <button class="filter-btn">Foam Latex</button>
+    <button class="filter-btn">Silicone</button>
+    <button class="filter-btn">Custom</button>
+  </div>
+
+  <p class="gallery-count">Showing 12 pieces</p>
+
+  <!-- MASK GRID -->
+  <div class="gallery-grid">
+
+    <div class="mask-card reveal">
+      <div class="mask-card-img">
+        <img src="brand assests/Zach_swampfx/swampfx2.jpg" alt="">
+        <div class="mask-card-placeholder">
+          <div class="mask-card-placeholder-icon">◎</div>
+          <span>Photo Coming Soon</span>
+        </div>
+      </div>
+      <div class="mask-card-body">
+        <div class="mask-card-name">DECAY REAPER</div>
+        <div class="mask-card-meta"><span class="tag-pill">Full Head</span><span class="tag-pill">Silicone</span></div>
+        <p class="mask-card-desc">Full-head silicone mask with hand-painted decay detail and deep-set eye sockets.</p>
+        <a href="contact.html" class="mask-card-link">Inquire →</a>
+      </div>
+    </div>
+
+    <div class="mask-card reveal reveal-d1">
+      <div class="mask-card-img">
+        <img src="brand assests/Zach_swampfx/swampfx2.jpg" alt="">
+        <div class="mask-card-placeholder">
+          <div class="mask-card-placeholder-icon">◎</div>
+          <span>Photo Coming Soon</span>
+        </div>
+      </div>
+      <div class="mask-card-body">
+        <div class="mask-card-name">SWAMP WRAITH</div>
+        <div class="mask-card-meta"><span class="tag-pill">Prosthetic</span><span class="tag-pill">Foam Latex</span></div>
+        <p class="mask-card-desc">Foam latex prosthetic appliance — algae-textured skin with intrinsic paint work.</p>
+        <a href="contact.html" class="mask-card-link">Inquire →</a>
+      </div>
+    </div>
+
+    <div class="mask-card reveal reveal-d2">
+      <div class="mask-card-img">
+        <img src="brand assests/Zach_swampfx/swampfx2.jpg" alt="">
+        <div class="mask-card-placeholder">
+          <div class="mask-card-placeholder-icon">◎</div>
+          <span>Photo Coming Soon</span>
+        </div>
+      </div>
+      <div class="mask-card-body">
+        <div class="mask-card-name">BONE CRAWLER</div>
+        <div class="mask-card-meta"><span class="tag-pill">Half Face</span><span class="tag-pill">Silicone</span></div>
+        <p class="mask-card-desc">Half-face silicone with exposed skeletal structure and rotted flesh surface detail.</p>
+        <a href="contact.html" class="mask-card-link">Inquire →</a>
+      </div>
+    </div>
+
+    <div class="mask-card reveal">
+      <div class="mask-card-img">
+        <img src="brand assests/Zach_swampfx/swampfx2.jpg" alt="">
+        <div class="mask-card-placeholder">
+          <div class="mask-card-placeholder-icon">◎</div>
+          <span>Photo Coming Soon</span>
+        </div>
+      </div>
+      <div class="mask-card-body">
+        <div class="mask-card-name">FLESH EATER</div>
+        <div class="mask-card-meta"><span class="tag-pill">Full Head</span><span class="tag-pill">Silicone</span></div>
+        <p class="mask-card-desc">Platinum silicone full-head with hand-punched hair and blood vessel detailing.</p>
+        <a href="contact.html" class="mask-card-link">Inquire →</a>
+      </div>
+    </div>
+
+    <div class="mask-card reveal reveal-d1">
+      <div class="mask-card-img">
+        <img src="brand assests/Zach_swampfx/swampfx2.jpg" alt="">
+        <div class="mask-card-placeholder">
+          <div class="mask-card-placeholder-icon">◎</div>
+          <span>Photo Coming Soon</span>
+        </div>
+      </div>
+      <div class="mask-card-body">
+        <div class="mask-card-name">NIGHT STALKER</div>
+        <div class="mask-card-meta"><span class="tag-pill">Custom</span><span class="tag-pill">Silicone</span></div>
+        <p class="mask-card-desc">Custom character build for independent film — full silicone with articulated jaw.</p>
+        <a href="contact.html" class="mask-card-link">Inquire →</a>
+      </div>
+    </div>
+
+    <div class="mask-card reveal reveal-d2">
+      <div class="mask-card-img">
+        <img src="brand assests/Zach_swampfx/swampfx2.jpg" alt="">
+        <div class="mask-card-placeholder">
+          <div class="mask-card-placeholder-icon">◎</div>
+          <span>Photo Coming Soon</span>
+        </div>
+      </div>
+      <div class="mask-card-body">
+        <div class="mask-card-name">THE RISEN</div>
+        <div class="mask-card-meta"><span class="tag-pill">Foam Latex</span></div>
+        <p class="mask-card-desc">Classic foam latex undead build — haunt-grade durability with hand-painted finish.</p>
+        <a href="contact.html" class="mask-card-link">Inquire →</a>
+      </div>
+    </div>
+
+    <div class="mask-card reveal">
+      <div class="mask-card-img">
+        <img src="brand assests/Zach_swampfx/swampfx2.jpg" alt="">
+        <div class="mask-card-placeholder">
+          <div class="mask-card-placeholder-icon">◎</div>
+          <span>Photo Coming Soon</span>
+        </div>
+      </div>
+      <div class="mask-card-body">
+        <div class="mask-card-name">ROT FACE</div>
+        <div class="mask-card-meta"><span class="tag-pill">Prosthetic</span><span class="tag-pill">Foam Latex</span></div>
+        <p class="mask-card-desc">Foam latex full-face prosthetic with layered necrotic tissue paint technique.</p>
+        <a href="contact.html" class="mask-card-link">Inquire →</a>
+      </div>
+    </div>
+
+    <div class="mask-card reveal reveal-d1">
+      <div class="mask-card-img">
+        <img src="brand assests/Zach_swampfx/swampfx2.jpg" alt="">
+        <div class="mask-card-placeholder">
+          <div class="mask-card-placeholder-icon">◎</div>
+          <span>Photo Coming Soon</span>
+        </div>
+      </div>
+      <div class="mask-card-body">
+        <div class="mask-card-name">GRAVE DIGGER</div>
+        <div class="mask-card-meta"><span class="tag-pill">Full Head</span><span class="tag-pill">Foam Latex</span></div>
+        <p class="mask-card-desc">Foam latex full-head with soil-stained surface treatment and extrinsic aging.</p>
+        <a href="contact.html" class="mask-card-link">Inquire →</a>
+      </div>
+    </div>
+
+    <div class="mask-card reveal reveal-d2">
+      <div class="mask-card-img">
+        <img src="brand assests/Zach_swampfx/swampfx2.jpg" alt="">
+        <div class="mask-card-placeholder">
+          <div class="mask-card-placeholder-icon">◎</div>
+          <span>Photo Coming Soon</span>
+        </div>
+      </div>
+      <div class="mask-card-body">
+        <div class="mask-card-name">MUCK DEMON</div>
+        <div class="mask-card-meta"><span class="tag-pill">Custom</span><span class="tag-pill">Silicone</span></div>
+        <p class="mask-card-desc">Swamp creature custom build — webbed texture, hand-painted mottled green finish.</p>
+        <a href="contact.html" class="mask-card-link">Inquire →</a>
+      </div>
+    </div>
+
+    <div class="mask-card reveal">
+      <div class="mask-card-img">
+        <img src="brand assests/Zach_swampfx/swampfx2.jpg" alt="">
+        <div class="mask-card-placeholder">
+          <div class="mask-card-placeholder-icon">◎</div>
+          <span>Photo Coming Soon</span>
+        </div>
+      </div>
+      <div class="mask-card-body">
+        <div class="mask-card-name">SKIN PEELER</div>
+        <div class="mask-card-meta"><span class="tag-pill">Half Face</span><span class="tag-pill">Silicone</span></div>
+        <p class="mask-card-desc">Half-face silicone with flayed skin texture and translucent layering technique.</p>
+        <a href="contact.html" class="mask-card-link">Inquire →</a>
+      </div>
+    </div>
+
+    <div class="mask-card reveal reveal-d1">
+      <div class="mask-card-img">
+        <img src="brand assests/Zach_swampfx/swampfx2.jpg" alt="">
+        <div class="mask-card-placeholder">
+          <div class="mask-card-placeholder-icon">◎</div>
+          <span>Photo Coming Soon</span>
+        </div>
+      </div>
+      <div class="mask-card-body">
+        <div class="mask-card-name">SWAMP THING</div>
+        <div class="mask-card-meta"><span class="tag-pill">Full Head</span><span class="tag-pill">Custom</span></div>
+        <p class="mask-card-desc">Full-head creature suit head — moss, bark, and vine detail on platinum silicone base.</p>
+        <a href="contact.html" class="mask-card-link">Inquire →</a>
+      </div>
+    </div>
+
+    <div class="mask-card reveal reveal-d2">
+      <div class="mask-card-img">
+        <img src="brand assests/Zach_swampfx/swampfx2.jpg" alt="">
+        <div class="mask-card-placeholder">
+          <div class="mask-card-placeholder-icon">◎</div>
+          <span>Photo Coming Soon</span>
+        </div>
+      </div>
+      <div class="mask-card-body">
+        <div class="mask-card-name">HOLLOW EYES</div>
+        <div class="mask-card-meta"><span class="tag-pill">Prosthetic</span><span class="tag-pill">Foam Latex</span></div>
+        <p class="mask-card-desc">Prosthetic eye socket appliance — sunken orbital detail with fine wrinkle work.</p>
+        <a href="contact.html" class="mask-card-link">Inquire →</a>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- CTA BANNER -->
+  <div class="cta-banner">
+    <div class="cta-banner-bg" style="background-image: url('brand assests/Zach_swampfx/image-2.jpg');"></div>
+    <div class="cta-banner-content reveal">
+      <h2>DON'T SEE WHAT<br>YOU'RE LOOKING FOR?</h2>
+      <p>Every Swamp FX mask can be built to your exact specifications. Send Zach your concept and he'll bring it to life.</p>
+      <a href="contact.html" class="btn btn-primary">Start a Custom Order →</a>
+    </div>
+  </div>
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-logo">
+        <img src="brand assests/Zach_swampfx/swampfx_word_logo_v101.png" alt="Swamp FX">
+        <p class="footer-tagline">Handcrafted Horror. Built by Hand.</p>
+        <p class="footer-copy">© 2026 Swamp FX. All rights reserved.</p>
+      </div>
+      <nav class="footer-nav">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Custom Orders</a></li>
+        </ul>
+      </nav>
+      <div class="footer-contact">
+        <h4>Get in Touch</h4>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon">✉</span>
+          <a href="mailto:Cavemanoutdoors@gmail.com">Cavemanoutdoors@gmail.com</a>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon">📍</span>
+          <span>Bowersville, GA</span>
+        </div>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-btn" title="Instagram">IG</a>
+          <a href="#" class="footer-social-btn" title="Facebook">FB</a>
+          <a href="#" class="footer-social-btn" title="TikTok">TK</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Swamp FX. All rights reserved.</span>
+      <span class="footer-bottom-domain">swampfx.art</span>
+    </div>
+    <div class="footer-built-by">
+      Built by <a href="https://bdfinkstudios.com" target="_blank" rel="noopener">BDFinkStudios.com</a> 2026
+    </div>
+  </footer>
+
+  <script src="js/swampfx.js"></script>
+</body>
+</html>

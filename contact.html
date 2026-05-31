@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Orders — Swamp FX | Start Your Project</title>
+  <meta name="description" content="Commission a custom horror mask from Swamp FX. Contact Zach in Bowersville, GA to start your project — silicone, foam latex, prosthetics, haunt builds, and film SFX.">
+  <link rel="stylesheet" href="css/swampfx.css">
+  <style>
+    /* Contact two-column */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: clamp(40px, 6vw, 80px);
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Mascot image in right col */
+    .contact-mascot {
+      margin-top: 28px;
+    }
+    .contact-mascot img {
+      width: 100%;
+      border: 1px solid rgba(90,200,0,0.2);
+      box-shadow: 0 0 40px var(--slime-glow);
+      clip-path: polygon(0 0, 96% 0, 100% 4%, 100% 100%, 4% 100%, 0 96%);
+    }
+
+    /* Social links row in contact */
+    .contact-socials {
+      display: flex;
+      gap: 12px;
+      margin-top: 8px;
+    }
+    .contact-social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--slate);
+      border: 1px solid var(--gunmetal);
+      padding: 7px 12px;
+      transition: color 0.25s, border-color 0.25s;
+    }
+    .contact-social-link:hover {
+      color: var(--slime);
+      border-color: var(--slime);
+    }
+  </style>
+</head>
+<body data-page="contact">
+
+  <!-- NAV -->
+  <nav class="site-nav">
+    <a href="index.html" class="nav-logo">
+      <img src="brand assests/Zach_swampfx/swampfx_word_logo_v101.png" alt="Swamp FX">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html"   data-nav="home">Home</a></li>
+      <li><a href="gallery.html" data-nav="gallery">Gallery</a></li>
+      <li><a href="about.html"   data-nav="about">About</a></li>
+      <li><a href="contact.html" data-nav="contact">Custom Orders</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="mailto:Cavemanoutdoors@gmail.com" class="nav-email-icon" title="Email Zach">✉</a>
+      <a href="contact.html" class="nav-quote-btn">Get a Quote</a>
+    </div>
+    <button class="nav-hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-skull">
+      <img src="brand assests/Zach_swampfx/swampfx4_skull_head_circle_v101.png" alt="">
+    </div>
+  </nav>
+  <div class="nav-mobile">
+    <ul>
+      <li><a href="index.html"   data-nav="home">Home</a></li>
+      <li><a href="gallery.html" data-nav="gallery">Gallery</a></li>
+      <li><a href="about.html"   data-nav="about">About</a></li>
+      <li><a href="contact.html" data-nav="contact">Custom Orders</a></li>
+    </ul>
+    <a href="contact.html" class="mobile-quote">Get a Quote →</a>
+  </div>
+
+
+  <!-- PAGE HERO -->
+  <div class="page-hero page-hero--md">
+    <div class="page-hero-bg" style="background-image: url('brand assests/Zach_swampfx/image-2.jpg');"></div>
+    <div class="page-hero-content">
+      <span class="page-hero-label">Custom Orders</span>
+      <h1 class="page-hero-title">LET'S BUILD SOMETHING<br>TERRIFYING</h1>
+      <p class="page-hero-sub">Tell Zach what you have in mind.<br>He'll take it from there.</p>
+    </div>
+  </div>
+
+
+  <!-- CONTACT SECTION -->
+  <section class="section section--black">
+    <div class="section-inner">
+      <div class="contact-grid">
+
+        <!-- LEFT: Form -->
+        <div class="reveal">
+          <span class="section-label">01 / Get in Touch</span>
+          <h2 class="heading-lg">START YOUR ORDER</h2>
+
+          <form class="contact-form" action="#" method="POST">
+
+            <div class="form-field">
+              <label class="form-label" for="name">Your Name</label>
+              <input class="form-input" type="text" id="name" name="name" placeholder="Full name" required>
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="email">Email Address</label>
+              <input class="form-input" type="email" id="email" name="email" placeholder="your@email.com" required>
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="phone">Phone <span style="color:var(--slate); font-size:0.55rem;">(Optional)</span></label>
+              <input class="form-input" type="tel" id="phone" name="phone" placeholder="(optional)">
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="project-type">Project Type</label>
+              <select class="form-select" id="project-type" name="project_type" required>
+                <option value="" disabled selected style="color:var(--slate)">Select a project type</option>
+                <option value="custom-mask">Custom Mask</option>
+                <option value="haunt-build">Haunt Build</option>
+                <option value="film-prosthetic">Film Prosthetic</option>
+                <option value="halloween-costume">Halloween Costume</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="message">Project Description</label>
+              <textarea class="form-textarea" id="message" name="message" placeholder="Describe your project — character concept, intended use, timeline, budget range..." required></textarea>
+            </div>
+
+            <button type="submit" class="form-submit">Send Your Project Brief →</button>
+            <p class="form-note">Zach responds to all inquiries within 48 hours.</p>
+
+          </form>
+        </div>
+
+        <!-- RIGHT: Info -->
+        <div class="reveal reveal-d3">
+          <span class="section-label">02 / Direct Contact</span>
+          <h2 class="heading-lg">REACH ZACH</h2>
+
+          <div class="contact-info-block">
+            <span class="contact-info-icon">✉</span>
+            <div>
+              <div class="contact-info-label">Email</div>
+              <div class="contact-info-value">
+                <a href="mailto:Cavemanoutdoors@gmail.com">Cavemanoutdoors@gmail.com</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-info-block">
+            <span class="contact-info-icon">📍</span>
+            <div>
+              <div class="contact-info-label">Location</div>
+              <div class="contact-info-value">Bowersville, GA</div>
+            </div>
+          </div>
+
+          <div class="contact-info-block">
+            <span class="contact-info-icon">🌐</span>
+            <div>
+              <div class="contact-info-label">Website</div>
+              <div class="contact-info-value">swampfx.art</div>
+            </div>
+          </div>
+
+          <div class="contact-info-block">
+            <span class="contact-info-icon">💬</span>
+            <div>
+              <div class="contact-info-label">Social</div>
+              <div class="contact-socials">
+                <a href="#" class="contact-social-link">IG</a>
+                <a href="#" class="contact-social-link">FB</a>
+                <a href="#" class="contact-social-link">TK</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="brief-callout">
+            <h4>What to Include in Your Brief</h4>
+            <ul>
+              <li>Character concept or reference images</li>
+              <li>Intended use — haunt, costume, film, cosplay</li>
+              <li>Timeline or hard deadline</li>
+              <li>Budget range</li>
+              <li>Special requirements — wearability, breathing, vision</li>
+            </ul>
+          </div>
+
+          <div class="contact-mascot">
+            <img src="brand assests/Zach_swampfx/swampfx2_alpha_v101.png" alt="Swamp FX mascot" style="border: none; box-shadow: none;">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <div class="divider"></div>
+
+
+  <!-- FAQ -->
+  <section class="section section--charcoal">
+    <div class="section-inner">
+      <div class="reveal">
+        <span class="section-label">03 / FAQ</span>
+        <h2 class="heading-xl">COMMON<br>QUESTIONS</h2>
+      </div>
+
+      <div class="faq-list reveal reveal-d1">
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-q-text">How long does a custom mask take?</span>
+            <span class="faq-chevron">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>Most custom masks take 4–8 weeks depending on complexity and materials. Highly detailed builds or full-head silicone pieces may run longer. Rush orders may be available — ask Zach when you reach out.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-q-text">What materials do you use?</span>
+            <span class="faq-chevron">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>Swamp FX masks are built with professional-grade foam latex and platinum silicone — the same materials used in Hollywood production. All paints are skin-safe and tested for extended wear.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-q-text">Can I wear the mask for extended periods?</span>
+            <span class="faq-chevron">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes. Comfort and wearability are part of the design process from day one. Zach accounts for breathability, vision range, and fit during the sculpt phase so the finished piece actually works for its intended use.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-q-text">Do you ship?</span>
+            <span class="faq-chevron">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes — Swamp FX ships nationwide within the US. Each mask is packed carefully to protect the finish during transit. International shipping is available on request — reach out for a quote.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-q-text">Can I send reference images?</span>
+            <span class="faq-chevron">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>Absolutely — and the more the better. The more visual reference you can provide, the better Zach can nail the character. Include refs in your project brief or email them directly to <a href="mailto:Cavemanoutdoors@gmail.com" style="color:var(--slime);">Cavemanoutdoors@gmail.com</a>.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-logo">
+        <img src="brand assests/Zach_swampfx/swampfx_word_logo_v101.png" alt="Swamp FX">
+        <p class="footer-tagline">Handcrafted Horror. Built by Hand.</p>
+        <p class="footer-copy">© 2026 Swamp FX. All rights reserved.</p>
+      </div>
+      <nav class="footer-nav">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Custom Orders</a></li>
+        </ul>
+      </nav>
+      <div class="footer-contact">
+        <h4>Get in Touch</h4>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon">✉</span>
+          <a href="mailto:Cavemanoutdoors@gmail.com">Cavemanoutdoors@gmail.com</a>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon">📍</span>
+          <span>Bowersville, GA</span>
+        </div>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-btn" title="Instagram">IG</a>
+          <a href="#" class="footer-social-btn" title="Facebook">FB</a>
+          <a href="#" class="footer-social-btn" title="TikTok">TK</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Swamp FX. All rights reserved.</span>
+      <span class="footer-bottom-domain">swampfx.art</span>
+    </div>
+    <div class="footer-built-by">
+      Built by <a href="https://bdfinkstudios.com" target="_blank" rel="noopener">BDFinkStudios.com</a> 2026
+    </div>
+  </footer>
+
+  <script src="js/swampfx.js"></script>
+</body>
+</html>

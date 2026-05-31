@@ -1,0 +1,8 @@
+# Large binary files — keep out of repo
+*.mp4
+*.zip
+*.psd
+
+# OS junk
+.DS_Store
+Thumbs.db
