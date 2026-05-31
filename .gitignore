@@ -1,5 +1,4 @@
 # Large binary files — keep out of repo
-*.mp4
 *.zip
 *.psd
 
