@@ -458,20 +458,20 @@ button { cursor: pointer; border: none; background: none; }
 .nav-skull {
   position: absolute;
   left: 50%;
-  bottom: 0;
-  transform: translateX(-50%) translateY(75%);
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
   pointer-events: none;
   z-index: 1001;
 }
 .nav-skull img {
-  height: 104px;
-  width: auto;
+  height: 54px;
+  width: 54px;
+  object-fit: contain;
   display: block;
 }
 
 .nav-logo {
   flex-shrink: 0;
-  margin-right: auto;
 }
 .nav-logo img {
   height: 42px;
@@ -479,13 +479,23 @@ button { cursor: pointer; border: none; background: none; }
   object-fit: contain;
 }
 
+/* Invisible zone that reserves space for the skull so links never slide under it */
+.nav-skull-zone {
+  width: 110px;
+  flex-shrink: 0;
+  position: relative;
+  align-self: stretch;
+}
+
 .nav-links {
   display: flex;
   align-items: center;
   gap: 36px;
   list-style: none;
-  margin: 0 40px;
+  flex: 1;
 }
+.nav-links--left  { justify-content: flex-end;  padding-right: 16px; }
+.nav-links--right { justify-content: flex-start; padding-left:  16px; }
 .nav-links a {
   font-family: var(--font-body);
   font-weight: 600;
